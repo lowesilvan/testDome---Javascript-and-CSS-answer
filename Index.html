@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Price List</title>
+</head>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+    /* @counter-style options {
+        system: fixed;
+        suffix: "(light)"; // Works on lists
+    } */
+
+    [data-tax-free="true"] td:nth-child(1)::after {
+        content: " (light)";
+    }
+
+    /* Write your CSS solution here (do not edit the surrounding HTML) */
+</style>
+
+<body>
+    <table>
+        <caption>Price List</caption>
+        <thead>
+            <th>Product</th>
+            <th>Price per 1000 kgs</th>
+        </thead>
+        <tbody>
+            <tr data-tax-free="false">
+                <td>Cotton</td>
+                <td>$1411.65</td>
+            </tr>
+            <tr data-tax-free="false">
+                <td>Jute</td>
+                <td>$838.43</td>
+            </tr>
+            <tr data-tax-free="true">
+                <td>Wheat</td>
+                <td>$212.99</td>
+            </tr>
+            <tr data-tax-free="true">
+                <td>Rice</td>
+                <td>$388.78</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
