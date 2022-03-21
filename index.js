@@ -10,9 +10,11 @@ class Snapshot {
 
 var array = [1, 2];
 var snap = new Snapshot(array);
-snap[0] = 3;
+array = [...snap.restore(), 3];
+console.log("new array is", array);
 array = snap.restore();
 console.log(array.join()); //It should log "1,2"
-array.push(4);
+array = [...snap.restore(), 4];
+console.log('second new array is now', array)
 array = snap.restore();
 console.log(array.join()); //It should log "1,2"
